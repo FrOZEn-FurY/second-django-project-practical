@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html5>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <style>
+        nav a {
+            color: aliceblue;
+            background-color: darkmagenta;
+            border-radius: 25px;
+            border: 1px solid gray;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+            nav a:visited {
+                color: aliceblue;
+            }
+
+            nav a:hover {
+                transition: background-color ease-in-out 0.3s;
+                background-color: darkslateblue;
+            }
+
+        .jumbotron {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+    <body>
+        {% include 'Incs/Navbar.html' %}
+        <div class = "jumbotron">
+            {% include 'Incs/Messages.html' %}
+            {% block bodycontent %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

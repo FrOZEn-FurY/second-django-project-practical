@@ -1,0 +1,18 @@
+{% extends 'Base.html' %}
+
+{% block bodycontent %}
+    <form action="" method="get" novalidate>
+        {{ form.as_p }}
+        <input type="submit" value="Search">
+    </form>
+    <main class="card">
+        <section class="card-body">
+            {% for post in Posts %}
+                <a style="text-decoration: none;" href="{{ post.get_absolute_url }}">
+                    <h4 style="display: inline-block; font-size: 20px;">{{ post.creator }}:</h4>       {{ post.title|truncatewords:10 }}<p style="opacity: 40%;">{{ post.date_updated|date:"D M jS Y" }}</p>
+                </a>
+                <hr/>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

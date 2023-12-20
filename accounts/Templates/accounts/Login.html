@@ -1,0 +1,10 @@
+{% extends 'Base.html' %}
+
+{% block bodycontent %}
+    <form action="" method="POST" class="col-md-6">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Log in" />
+    </form>
+    <a href="{% url 'accounts:ResetPassword' %}" style="text-decoration: none; color: deepskyblue;">Forgot your password ?</a>
+{% endblock %}

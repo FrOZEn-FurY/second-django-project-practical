@@ -1,0 +1,10 @@
+{% extends 'Base.html' %}
+
+{% block bodycontent %}
+    <h1 class="bg-dark text-white text-center" style="margin: 2px 200px; padding: 5px; border-radius: 25px;">Edit Profile Form</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Edit"/>
+    </form>
+{% endblock %}
